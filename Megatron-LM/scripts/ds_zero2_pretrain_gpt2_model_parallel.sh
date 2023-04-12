@@ -1,10 +1,10 @@
 #! /bin/bash
 
 # Change for multinode config
-MP_SIZE=4
+MP_SIZE=8
 
 NUM_WORKERS=1
-NUM_GPUS_PER_WORKER=16
+NUM_GPUS_PER_WORKER=8
 
 script_path=$(realpath $0)
 script_dir=$(dirname $script_path)
@@ -20,7 +20,7 @@ gpt_options=" \
        --max-position-embeddings 1024 \
        --train-iters 100000 \
        --resume-dataloader \
-       --train-data webtext \
+       --train-data wikipedia \
        --lazy-loader \
        --tokenizer-type GPT2BPETokenizer \
        --split 949,50,1 \

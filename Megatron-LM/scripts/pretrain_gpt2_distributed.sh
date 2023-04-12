@@ -17,12 +17,12 @@ python -m torch.distributed.launch $DISTRIBUTED_ARGS \
        --num-layers 24 \
        --hidden-size 1024 \
        --num-attention-heads 16 \
-       --batch-size 8 \
+       --batch-size 128 \
        --seq-length 1024 \
        --max-position-embeddings 1024 \
-       --train-iters 320000 \
-       --save checkpoints/gpt2_345m \
-       --load checkpoints/gpt2_345m \
+       --train-iters 1000 \
+       --save checkpoints/gpt2_345m_d \
+       --load checkpoints/gpt2_345m_d \
        --resume-dataloader \
        --train-data wikipedia \
        --lazy-loader \

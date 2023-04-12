@@ -37,6 +37,5 @@ python -m torch.distributed.launch $DISTRIBUTED_ARGS \
        --clip-grad 1.0 \
        --warmup .01 \
        --checkpoint-activations \
-       --fp16 \
-       --deepspeed
+       --fp16 
 set +x
